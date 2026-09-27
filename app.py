@@ -11,7 +11,7 @@ from transcription_utils import transcribe_video_file
 from gemini_utils import generate_gemini_response
 
 # Configure Google Gemini API
-genai.configure(api_key="AIzaSyDKw7kpq842fo6QZMbOH4PXYtLV7wnK5x8")
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # Function to get transcript from YouTube link
 def get_youtube_transcript(youtube_url):
